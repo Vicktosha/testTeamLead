@@ -171,3 +171,13 @@
         }
     }
 }
+
+@media (max-width: 540px){
+    .composition__inner {
+        grid-template-columns: 138px 100px 138px;
+        gap: 1px;
+    }
+    .composition__list{
+        font-size: 14px;
+    }
+}

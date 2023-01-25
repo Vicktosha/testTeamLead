@@ -27,9 +27,11 @@
 .order a{
     color: $color-3;
     text-decoration: none;
+    display: block;
 }
 .order_big a{
     color: $color-6;
+    display: block;
 }
 
 @media (max-width: 991px){
@@ -40,5 +42,12 @@
 @media (max-width: 767px){
     .order_big{
         width: 150px;
+    }
+}
+
+@media (max-width: 540px){
+    .order_big{
+        width: 100px;
+        height: 60px;
     }
 }

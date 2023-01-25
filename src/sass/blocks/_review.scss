@@ -47,3 +47,9 @@
         height: 600px;
     }
 }
+
+@media (max-width: 540px){
+    .review__text {
+        font-size: 14px;
+    }
+}
