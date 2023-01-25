@@ -1,0 +1,47 @@
+.review {
+    // background:linear-gradient($color-3, $color-6);
+    background: url(/img/bg-composition.jpg) center / 100% no-repeat;
+    &__inner {
+        padding: 40px 0 90px 0;
+    }
+    &__carousel{
+        height: 700px;
+    }
+    &__item{
+        width: 300px;
+        height: 700px;
+        margin: 15px;
+    }
+    &__photo{
+        width: 100%;
+    }
+    &__name{
+        text-decoration: underline;
+        color: $color-5;
+        text-shadow: $color-2 1px 0 10px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    &__text{
+        width: 100%;
+        color: $color-5;
+        text-shadow: $color-2 1px 0 10px;
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+.slick-dots {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    position: absolute;
+    left: calc(50% - 250px);
+}
+.slick-dots button {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background:linear-gradient($color-3, $color-6);
+}

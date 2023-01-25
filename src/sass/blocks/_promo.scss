@@ -1,0 +1,74 @@
+.promo {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    background-color: rgba($color-1,0.5);
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "promoTitle promoTitle"
+        "promoImg promoDetails";
+        gap: 30px;
+        justify-items: center;
+
+    }
+    &__title{
+        grid-area: promoTitle;
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+        color: $color-5;
+        text-shadow: $color-1 1px 0 10px;
+    }
+    &__img{
+        grid-area: promoImg;
+    }
+    &__details{
+        grid-area: promoDetails;
+        font-size: 19px;
+        font-weight: 500;
+        color: $color-5;
+        text-shadow: $color-1 1px 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+    }
+    &__list {
+        font-size: 19px;
+        font-weight: 500;
+        color: $color-5;
+        text-shadow: $color-1 1px 0 10px;
+        opacity: 0.8;
+        list-style-type: none;
+    }
+    &__bg{
+        width: 100vw;
+        position: absolute;
+        top: -150px;
+        z-index: -2;
+    }
+
+    // Promo Bottom
+    &__text {
+        grid-area: promoText;
+    }
+    &__text ul{
+        list-style-type: disc;
+    }
+    &__inner.promo__inner_bottom{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "promoImg promoDetails"
+        "promoText promoText";
+        gap: 30px;
+        justify-items: center;
+    }
+    &_bottom{
+        height: 800px;
+        padding: 40px 0;
+        background: url(/img/bg-composition.jpg) center / 100% no-repeat;
+    }
+}
