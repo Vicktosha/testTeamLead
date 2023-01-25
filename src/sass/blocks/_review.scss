@@ -1,9 +1,6 @@
 .review {
     // background:linear-gradient($color-3, $color-6);
-    background: url(/img/bg-composition.jpg) center / 100% no-repeat;
-    &__inner {
-        padding: 40px 0 90px 0;
-    }
+    background: url(../img/bg-composition.jpg) center / 100% 100% no-repeat;
     &__carousel{
         height: 700px;
     }
@@ -44,4 +41,9 @@
     height: 30px;
     border-radius: 100%;
     background:linear-gradient($color-3, $color-6);
+}
+@media (max-width: 1200px){
+    .review__carousel{
+        height: 600px;
+    }
 }

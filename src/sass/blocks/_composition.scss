@@ -1,6 +1,6 @@
 .composition {
     // background:linear-gradient($color-6, $color-3);
-    background: url(/img/bg-composition.jpg) center / 100% no-repeat;
+    background: url(../img/bg-composition.jpg) center / 100% 100% no-repeat;
     &__inner {
         padding: 80px 0;
         display: grid;
@@ -13,6 +13,7 @@
     }
     &__img{
         grid-area: compositionImg;
+        width: 100%;
     }
     &__list_left{
         grid-area: compositionLeft;
@@ -34,7 +35,7 @@
         position: relative;
     }
     &__item::before {
-        content: url(/icons/tree.png);
+        content: url(../icons/tree.png);
         position: absolute;
         left: calc(50% - 30px);
         top: -60px;
@@ -85,5 +86,88 @@
     &__list_right .composition__item:nth-child(3)::after{
         transform: rotate(45deg);
         top: -60px;
+    }
+}
+@media (max-width: 1199px){
+    .composition{
+        &__item::after {
+            width: 150px;
+        }
+        &__item:nth-child(2)::after{
+            width: 80px;
+        }
+        &__list_right .composition__item::after {
+            width: 150px;
+            left: -125px;
+        }
+        &__list_right .composition__item:nth-child(2)::after{
+            width: 80px;
+            left: -90px;
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .composition{
+        &__inner {
+            grid-template-columns: 1fr 300px 1fr;
+        }
+        &__item::after{
+            width: 87px;
+            top: 49px;
+            left: 126px;
+        }
+        &__item:nth-child(2):after{
+            width: 50px;
+        }
+        &__item:nth-child(3):after{
+            width: 160px;
+            top: -50px;
+            left: 119px;
+        }
+        &__list_right .composition__item::after {
+            width: 87px;
+            top: 49px;
+            left: -80px;
+        }
+        &__list_right .composition__item:nth-child(2)::after{
+            width: 50px;
+            left: -60px;
+        }
+        &__list_right .composition__item:nth-child(3)::after{
+            width: 160px;
+            top: -50px;
+            left: -140px;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .composition{
+        &__img{
+            width: 100%;
+        }
+        &__inner {
+            grid-template-columns: 1fr 200px 1fr;
+            gap: 5px;
+        }
+        &__item::after{
+            width: 0px;
+        }
+        &__item:nth-child(2):after{
+            width: 0px;
+        }
+        &__item:nth-child(3):after{
+            width: 0px;
+        }
+        &__list_right .composition__item::after {
+            width: 0px;
+        }
+        &__list_right .composition__item:nth-child(2)::after{
+            width: 0px;
+        }
+        &__list_right .composition__item:nth-child(3)::after{
+            width: 0px;
+        }
     }
 }

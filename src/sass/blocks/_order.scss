@@ -31,3 +31,14 @@
 .order_big a{
     color: $color-6;
 }
+
+@media (max-width: 991px){
+    .order_big{
+        width: 250px;
+    }
+}
+@media (max-width: 767px){
+    .order_big{
+        width: 150px;
+    }
+}

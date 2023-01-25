@@ -1,6 +1,6 @@
 .promo {
+    padding-bottom: 50px;
     position: relative;
-    height: 700px;
     overflow: hidden;
     background-color: rgba($color-1,0.5);
     &__inner {
@@ -44,9 +44,9 @@
         list-style-type: none;
     }
     &__bg{
-        width: 100vw;
+        width: 100%;
         position: absolute;
-        top: -150px;
+        top: 0px;
         z-index: -2;
     }
 
@@ -69,6 +69,55 @@
     &_bottom{
         height: 800px;
         padding: 40px 0;
-        background: url(/img/bg-composition.jpg) center / 100% no-repeat;
+        background: url(../img/bg-composition.jpg) center / 100% 100% no-repeat;
+    }
+}
+
+@media (max-width: 1399px) {
+    .container {
+        width: 1140px;
+    }
+}
+@media (max-width: 1199px){
+    .container{
+        width: 960px;
+    }
+    .promo{
+        &__bg{
+            width: auto;
+            position: absolute;
+            top: 0;
+            z-index: -2;
+            height: 100%;
+        }
+    }
+}
+@media (max-width: 991px){
+    .container {
+        width: 720px;
+    }
+    .promo{
+        &__list{
+            font-size: 16px;
+        }
+        &__bg{
+            width: auto;
+        }
+    }
+}
+@media (max-width: 767px){
+    .container{
+        width: 540px;
+    }
+    .promo{
+        &__list li{
+            margin-bottom: 20px;
+        }
+        &__img{
+            width: 250px;
+        }
+        &__bg{
+            left: -150px;
+        }
     }
 }
